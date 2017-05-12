@@ -1,0 +1,2 @@
+class DanceShows::Show
+end

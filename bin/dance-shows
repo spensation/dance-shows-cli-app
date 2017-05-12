@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/dance_shows'
+
+DanceShows::CLI.new.call

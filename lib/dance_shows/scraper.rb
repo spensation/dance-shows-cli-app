@@ -1,0 +1,2 @@
+class DanceShows::Scraper
+end
