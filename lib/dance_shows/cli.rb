@@ -10,7 +10,7 @@ class DanceShows::CLI
 
   def list_shows
     DanceShows::Show.all.each.with_index do |show, i|
-      puts "#{i + 1} #{show.name} - #{show.cost}"
+      puts "#{i + 1} #{show.name} - #{show.venue} --- #{show.cost}"
     end
   end
 
