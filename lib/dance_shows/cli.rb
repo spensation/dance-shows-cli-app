@@ -20,20 +20,21 @@ class DanceShows::CLI
     while input != 'exit'
       input = gets.strip.downcase
 
-      if input.to_i > 0
-        puts "#{show.length}"
-        call
-      elsif input == 'list'
-        list_shows
-      elsif input == 'exit'
-        exit
-      else
-        puts 'Not sure what you want.  Please enter a valid number or type list to see entire list.'
-      end
-    end
-  end
+      if input.to_i <= DanceShows::Show.all.size
+        show = DanceShows::Show.all[input.to_i - 1]
+        puts "#{show.description}"
+        puts "Would you like to read more?"
 
-  def goodbye
-    puts "Thanks for checking out what's going on in the Bay Area's dance scene."
+        answer = gets.strip
+
+        if ['Y, YES'].include?(answer.upcase)
+          puts "#{show.url}"
+        end
+      end
+
+      puts "Would you like to list again or exit?"
+      input = gets.strip
+
+    end
   end
 end

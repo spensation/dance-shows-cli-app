@@ -12,7 +12,7 @@ class DanceShows::Scraper
       show.cost = show_div.search(".tribe-events-event-cost").children.text.strip
       show.date = show_div.search(".tribe-event-schedule-details").children.text.strip
       show.description = show_div.search("p").text.strip
-
+      show.url = show_div.search('.tribe-events-read-more').first.attributes['href'].value
       show.save
 
     end
