@@ -23,18 +23,27 @@ class DanceShows::CLI
       if input.to_i <= DanceShows::Show.all.size
         show = DanceShows::Show.all[input.to_i - 1]
         puts "#{show.description}"
-        puts "Would you like to read more?"
+        puts "Would you like to see the list again? Y/N"
 
         answer = gets.strip
 
-        if ['Y, YES'].include?(answer.upcase)
-          puts "#{show.url}"
+        if answer == 'Y'
+          list_shows
+        elsif answer == 'N' 
+          goodbye
+        else
+          puts 'Please enter Y or N.'
         end
       end
 
-      puts "Would you like to list again or exit?"
-      input = gets.strip
+      # puts "Would you like to list again or exit?"
+      # input = gets.strip
 
     end
+  end
+
+  def goodbye
+    puts "Thanks for visiting!"
+    exit
   end
 end
