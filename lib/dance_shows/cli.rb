@@ -10,7 +10,7 @@ class DanceShows::CLI
 
   def list_shows
     DanceShows::Show.all.each.with_index do |show, i|
-      puts "#{i + 1} #{show.name} - #{show.venue} --- #{show.cost}"
+      puts "#{i + 1} #{show.name} #{show.venue} #{show.cost}"
     end
   end
 
@@ -29,15 +29,13 @@ class DanceShows::CLI
 
         if answer == 'Y'
           list_shows
-        elsif answer == 'N' 
+        elsif answer == 'N'
           goodbye
         else
           puts 'Please enter Y or N.'
         end
       end
 
-      # puts "Would you like to list again or exit?"
-      # input = gets.strip
 
     end
   end

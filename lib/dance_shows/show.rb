@@ -1,6 +1,6 @@
 class DanceShows::Show
 
-  attr_accessor :name, :venue, :cost, :description, :date, :url
+  attr_accessor :name, :venue, :cost, :description, :date
 
   @@all = []
 
