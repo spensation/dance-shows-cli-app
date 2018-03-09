@@ -1,6 +1,14 @@
 class DanceShows::CLI
 
   def call
+    puts " 
+              !!!!!  !!!  !!!  !   !!!!!!   !!!!!!
+              !!  !  ! !  !!!! !   !!       !! 
+              !!  !  !!!  !!  !!   !!       !!!!!
+              !!  !  ! !  !!   !   !!       !! 
+              !!!!!  ! !  !!   !   !!!!!!   !!!!!!
+
+              "
     puts "Welcome to Dance Shows.  Find out about upcoming performances in the Bay Area."
     DanceShows::Scraper.new.scrape_shows
     list_shows
