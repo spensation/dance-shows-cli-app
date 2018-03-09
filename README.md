@@ -20,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once the package has been installed, run
+
+	$ ruby ./bin/dance-shows
+
+	
+Use this gem to stay up to date on Dance events in the Bay Area.
 
 ## Development
 
